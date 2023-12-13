@@ -5,38 +5,56 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@fortawesome/fontawesome-free':
+    specifier: ^6.5.1
+    version: 6.5.1
+  '@fortawesome/fontawesome-svg-core':
+    specifier: ^6.5.1
+    version: 6.5.1
+  '@fortawesome/free-solid-svg-icons':
+    specifier: ^6.5.1
+    version: 6.5.1
+  '@fortawesome/svelte-fontawesome':
+    specifier: ^0.2.0
+    version: 0.2.0(@fortawesome/fontawesome-svg-core@6.5.1)(svelte@4.2.8)
   '@playwright/test':
-    specifier: ^1.28.1
+    specifier: ^1.40.1
     version: 1.40.1
   '@sveltejs/adapter-auto':
-    specifier: ^2.0.0
+    specifier: ^2.1.1
     version: 2.1.1(@sveltejs/kit@1.30.2)
   '@sveltejs/kit':
-    specifier: ^1.27.4
+    specifier: ^1.30.2
     version: 1.30.2(svelte@4.2.8)(vite@4.5.1)
+  dexie:
+    specifier: 4.0.1-beta.5
+    version: 4.0.1-beta.5
+  dexie-cloud-addon:
+    specifier: 4.0.1-beta.48
+    version: 4.0.1-beta.48(dexie@4.0.1-beta.5)
   prettier:
-    specifier: ^3.0.0
+    specifier: ^3.1.1
     version: 3.1.1
   prettier-plugin-svelte:
-    specifier: ^3.0.0
+    specifier: ^3.1.2
     version: 3.1.2(prettier@3.1.1)(svelte@4.2.8)
   svelte:
-    specifier: ^4.2.7
+    specifier: ^4.2.8
     version: 4.2.8
   svelte-check:
-    specifier: ^3.6.0
+    specifier: ^3.6.2
     version: 3.6.2(svelte@4.2.8)
   tslib:
-    specifier: ^2.4.1
+    specifier: ^2.6.2
     version: 2.6.2
   typescript:
-    specifier: ^5.0.0
+    specifier: ^5.3.3
     version: 5.3.3
   vite:
-    specifier: ^4.4.2
+    specifier: ^4.5.1
     version: 4.5.1(@types/node@20.10.4)
   vitest:
-    specifier: ^0.32.2
+    specifier: ^0.32.4
     version: 0.32.4
 
 packages:
@@ -250,6 +268,44 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
+    dev: true
+
+  /@fortawesome/fontawesome-common-types@6.5.1:
+    resolution: {integrity: sha512-GkWzv+L6d2bI5f/Vk6ikJ9xtl7dfXtoRu3YGE6nq0p/FFqA1ebMOAWg3XgRyb0I6LYyYkiAo+3/KrwuBp8xG7A==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
+
+  /@fortawesome/fontawesome-free@6.5.1:
+    resolution: {integrity: sha512-CNy5vSwN3fsUStPRLX7fUYojyuzoEMSXPl7zSLJ8TgtRfjv24LOnOWKT2zYwaHZCJGkdyRnTmstR0P+Ah503Gw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
+
+  /@fortawesome/fontawesome-svg-core@6.5.1:
+    resolution: {integrity: sha512-MfRCYlQPXoLlpem+egxjfkEuP9UQswTrlCOsknus/NcMoblTH2g0jPrapbcIb04KGA7E2GZxbAccGZfWoYgsrQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.1
+    dev: true
+
+  /@fortawesome/free-solid-svg-icons@6.5.1:
+    resolution: {integrity: sha512-S1PPfU3mIJa59biTtXJz1oI0+KAXW6bkAb31XKhxdxtuXDiUIFsih4JR1v5BbxY7hVHsD1RKq+jRkVRaf773NQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.1
+    dev: true
+
+  /@fortawesome/svelte-fontawesome@0.2.0(@fortawesome/fontawesome-svg-core@6.5.1)(svelte@4.2.8):
+    resolution: {integrity: sha512-ri61lOqne8JtftoTW1AEnFAAlrTnKg0JvC8MiUJiEWhLu3wcbh7QwIytfs6YFRImVYOmK/OxcA9EWj+Ei8NM4g==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      svelte: '>=3.x'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.5.1
+      svelte: 4.2.8
     dev: true
 
   /@jest/schemas@29.6.3:
@@ -639,6 +695,25 @@ packages:
 
   /devalue@4.3.2:
     resolution: {integrity: sha512-KqFl6pOgOW+Y6wJgu80rHpo2/3H07vr8ntR9rkkFIRETewbf5GaYYcakYfiKz89K+sLsuPkQIZaXDMjUObZwWg==}
+    dev: true
+
+  /dexie-cloud-addon@4.0.1-beta.48(dexie@4.0.1-beta.5):
+    resolution: {integrity: sha512-gb4812HgiKkoAGvnxdD/CYH5Fj5A1dWjDM5wEpPC7NWghEe85hzLBMYphztE0nbidtsHXkkqr0OffpQXnlfOMQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      dexie: ^4.0.1-alpha.5
+    dependencies:
+      dexie: 4.0.1-beta.5
+      dexie-cloud-common: 1.0.31
+      rxjs: 7.8.1
+    dev: true
+
+  /dexie-cloud-common@1.0.31:
+    resolution: {integrity: sha512-94Ag7YPcr3qkpljIQAU9xJq202SUQ7R2L6fg+tw7CZqRDCw+igz2mDppQEseimjPHHuaHpIKcQMYt/SQiohQJg==}
+    dev: true
+
+  /dexie@4.0.1-beta.5:
+    resolution: {integrity: sha512-qXdyn2M9IwIbLh3+p3vY+o7ocYGTu0Cbc5xRVAaPsgQMukaIPBbrJin4VhKRUbOz0coHDo5VYvD4SEeFdGYDkA==}
     dev: true
 
   /diff-sequences@29.6.3:
@@ -1084,6 +1159,12 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
+
+  /rxjs@7.8.1:
+    resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
+    dependencies:
+      tslib: 2.6.2
     dev: true
 
   /sade@1.8.1:

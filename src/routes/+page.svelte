@@ -1,2 +1,3 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Svelte Dexie Cloud Todo App (WIP)</h1>
+<p>Visit <a href="https://github.com/LarryEitel/svelte-dexie-cloud-todo-app">
+	https://github.com/LarryEitel/svelte-dexie-cloud-todo-app</a>.</p>

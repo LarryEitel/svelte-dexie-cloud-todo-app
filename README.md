@@ -1,4 +1,4 @@
-# Svelte Dexie Cloud ToDo app
+# Svelte Dexie Cloud ToDo app (WIP)
 
 This project is a sample ToDo app built with Svelte and Dexie Cloud.
 

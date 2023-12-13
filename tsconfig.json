@@ -9,7 +9,13 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler"
+		"moduleResolution": "bundler",
+		// used in react sample app
+		"allowSyntheticDefaultImports": true,
+		"noFallthroughCasesInSwitch": true
+		// "moduleResolution": "node",
+		// "isolatedModules": true,
+		// "noEmit": true,
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
