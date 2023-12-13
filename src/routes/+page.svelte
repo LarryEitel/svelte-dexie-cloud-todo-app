@@ -1,5 +1,5 @@
 <script>
-	import TodoLists from '../components/TodoLists.svelte';
+	// import TodoLists from '../components/TodoLists.svelte';
 </script>
 
 <h1>Svelte Dexie Cloud Todo App (WIP)</h1>
@@ -7,5 +7,5 @@
 	https://github.com/LarryEitel/svelte-dexie-cloud-todo-app</a>.</p>
 
 <div>
-	<TodoLists />
+	<!--<TodoLists />-->
 </div>
