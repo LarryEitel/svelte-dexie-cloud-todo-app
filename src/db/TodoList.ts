@@ -1,6 +1,6 @@
-import { Entity } from 'dexie';
+import Dexie, { liveQuery, type DexieOptions, type Table } from 'dexie';
 import type { TodoDB } from './TodoDB';
-import { DBRealmMember, getTiedRealmId } from 'dexie-cloud-addon';
+import { type DBRealmMember, getTiedRealmId } from 'dexie-cloud-addon';
 
 /** Since there are some actions associated with
  * this entity (share(), unshare() etc) it can be
@@ -13,7 +13,7 @@ import { DBRealmMember, getTiedRealmId } from 'dexie-cloud-addon';
  * This is to avoid recursive dependencies when you need to access
  * db from within a method.
  */
-export class TodoList extends Entity<TodoDB> {
+export class TodoList extends Dexie {
   //
   // Persisted Properties
   //

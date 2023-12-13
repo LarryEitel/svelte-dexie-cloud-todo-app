@@ -1,7 +1,7 @@
-import Dexie, { Table } from 'dexie';
-import dexieCloud, { DexieCloudTable } from 'dexie-cloud-addon';
+import Dexie, { type Table } from 'dexie';
+import dexieCloud, { type DexieCloudTable } from 'dexie-cloud-addon';
 import { populate } from './populate';
-import { TodoItem } from './TodoItem';
+import type { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 
 export class TodoDB extends Dexie {
