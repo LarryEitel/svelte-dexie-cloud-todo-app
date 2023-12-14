@@ -23,10 +23,6 @@ export class TodoList extends Dexie {
   owner!: string;
   title!: string;
 
-  //
-  // Methods
-  //
-
   isSharable() {
     return this.realmId === getTiedRealmId(this.id);
   }
@@ -176,4 +172,5 @@ export class TodoList extends Dexie {
       }
     );
   }
+
 }

@@ -30,28 +30,29 @@ export function populate(db: TodoDB) {
   // Private IDs are possible to test but does not behave optimally yet (as of 2021-12-19)
   // Need to refine how they sync before using them by default.
   // If you want to try, uncomment the code below:
-  /*const todoListId = `#tdl-defaultTodoList`;
-  return db.transaction('rw', db.todoLists, db.todoItems, () => {
-    db.todoLists.add({
-      id: todoListId,
-      title: 'To Do Today',
-    });
-    db.todoItems.bulkAdd([
-      {
-        id: '#tdi-defaultItem001',
-        title: 'Feed the birds',
-        todoListId,
-      },
-      {
-        id: '#tdi-defaultItem002',
-        title: 'Watch a movie',
-        todoListId,
-      },
-      {
-        id: '#tdi-defaultItem003',
-        title: 'Have some sleep',
-        todoListId,
-      },
-    ]);
-  });*/
+  // const todoListId = `#tdl-defaultTodoList`;
+  // return db.transaction('rw', db.todoLists, db.todoItems, () => {
+  //   console.log('populate db.transaction')
+  //   db.todoLists.add({
+  //     id: todoListId,
+  //     title: 'To Do Today',
+  //   });
+  //   db.todoItems.bulkAdd([
+  //     {
+  //       id: '#tdi-defaultItem001',
+  //       title: 'Feed the birds',
+  //       todoListId,
+  //     },
+  //     {
+  //       id: '#tdi-defaultItem002',
+  //       title: 'Watch a movie',
+  //       todoListId,
+  //     },
+  //     {
+  //       id: '#tdi-defaultItem003',
+  //       title: 'Have some sleep',
+  //       todoListId,
+  //     },
+  //   ]);
+  // });
 }

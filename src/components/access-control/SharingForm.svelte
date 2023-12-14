@@ -1,13 +1,12 @@
-<script>
-	import writable from 'svelte/store';
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import { db } from '../../db';
-	import EditMember from './EditMember.svelte';
+	import { db, TodoList } from '@/db';
 	import { faTrash } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import EditMember from './EditMember.svelte';
 	import importFile from '../../data/importfile.json';
 
-	export let todoList;
+	export let todoList: TodoList;
 
 	let name = '';
 	let email = '';
@@ -47,7 +46,7 @@
 		</thead>
 		<tbody>
 			{#each members as member (member.id)}
-				<MemberRow {member} {todoList} />
+				<EditMember {member} {todoList} />
 			{/each}
 		</tbody>
 	</table>
@@ -77,49 +76,9 @@
 				Send invite
 			</button>
 		</form>
-	{:else}
-		<a href="#" on:click|preventDefault={toggleManualInvite}>
-			Invite by email address
-		</a>
 	{/if}
+	<a href="/" on:click|preventDefault={toggleManualInvite}>
+		Invite by email address
+	</a>
 	<hr />
 {/if}
-
-<script>
-	function MemberRow({ member, todoList }) {
-		const can = db.permissions(db, 'members', member);
-		const isMe = member.userId === db.cloud.currentUserId;
-		const isOwner = member.userId === todoList.owner;
-		let memberText = member.name || member.email || member.userId;
-		if (isMe) memberText += ' (me)';
-
-		return (
-			<tr style={member.accepted ? {} : { opacity: 0.5 }}>
-				<td style={{ paddingRight: 12 }}>{memberText}</td>
-				<td>
-					<EditMember {member} {todoList} />
-				</td>
-				<td>
-					{can.delete() && !isOwner ? (
-						<div className="todo-list-trash">
-							<button className="button" on:click={() => todoList.unshareWith(member)}>
-								{!!member.rejected && <span style={{ fontStyle: 'italic' }}>Rejected </span>}
-								{!member.rejected && !member.accepted && <span style={{ fontStyle: 'italic' }}>Pending invite </span>}
-								<FontAwesomeIcon icon={faTrash} />
-							</button>
-						</div>
-					) : (
-						!isOwner && member.userId === db.cloud.currentUserId && ((member.accepted?.getTime() || 0) > (member.rejected?.getTime() || 0) ? (
-							<button on:click={() => todoList.leave()}>Leave list</button>
-						) : (
-							<button on:click={() => db.members.update(member.id, { accepted: new Date(), rejected: undefined })}>
-								Accept invite
-							</button>
-						))}
-					)}
-				</td>
-				<td></td>
-			</tr>
-		);
-	}
-</script>
