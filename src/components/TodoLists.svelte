@@ -14,7 +14,7 @@
 {#if lists.length > 0}
 	<div>
 		{#each lists as list (list.id)}
-			<pre>{JSON.stringify(list)}</pre>
+			<TodoListView {list} />
 		{/each}
 	</div>
 {:else}
