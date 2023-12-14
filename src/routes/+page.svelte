@@ -38,9 +38,14 @@
 		</a>
 		to Svelte.
 	</p>
-	<p><b>Note:</b> Parts converted to svelte but not yet functional.</p>
-	<p><b>If this interests you, please jump in.</b></p>
+	<p>
+		<b>Note:</b> Parts converted to svelte but not yet functional.
+	</p>
+	<p>
+		<b>If this interests you, <a href="https://github.com/LarryEitel/svelte-dexie-cloud-todo-app">please jump in</a>.</b>
+	</p>
 </div>
+
 <div>
 	<NavBar />
 	<Invites />
