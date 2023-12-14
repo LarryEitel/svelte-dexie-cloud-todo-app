@@ -40,11 +40,6 @@
 	</p>
 	<p><b>Note:</b> Parts converted to svelte but not yet functional.</p>
 	<p><b>If this interests you, please jump in.</b></p>
-
-	<p>
-		Live:
-		<a href="https://todo.eitel.com">https://todo.eitel.com</a>
-	</p>
 </div>
 <div>
 	<NavBar />
